@@ -98,4 +98,3 @@ unsigned int convert_p(va_list args, buffer_t *output,
 
 	return (ret);
 }
-

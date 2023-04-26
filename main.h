@@ -1,4 +1,4 @@
-#ifndef MAIN_H
+#ifndef MAIN_H
 #define MAIN_H
 
 #include <limits.h>
@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-/* Flag Modifier Macros */
+/* Flag Modifier Macros */
 #define PLUS 1
 #define SPACE 2
 #define HASH 4
@@ -18,7 +18,7 @@
 #define ZERO_FLAG ((flags >> 3) & 1)
 #define NEG_FLAG ((flags >> 4) & 1)
 
-/* Length Modifier Macros */
+/* Length Modifier Macros */
 #define SHORT 1
 #define LONG 2
 
@@ -60,8 +60,7 @@ typedef struct flag_s
 
 int _printf(const char *format, ...);
 
-
-/* Conversion Specifier Functions */
+/* Conversion Specifier Functions */
 unsigned int convert_c(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 unsigned int convert_s(va_list args, buffer_t *output,
@@ -89,6 +88,14 @@ unsigned int convert_r(va_list args, buffer_t *output,
 unsigned int convert_R(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 
+/* Handlers */
+unsigned char handle_flags(const char *flags, char *index);
+unsigned char handle_length(const char *modifier, char *index);
+int handle_width(va_list args, const char *modifier, char *index);
+int handle_precision(va_list args, const char *modifier, char *index);
+unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
+		unsigned char, int, int, unsigned char);
+
 /* Modifiers */
 unsigned int print_width(buffer_t *output, unsigned int printed,
 		unsigned char flags, int wid);
@@ -107,4 +114,3 @@ unsigned int convert_ubase(buffer_t *output, unsigned long int num, char *base,
 		unsigned char flags, int wid, int prec);
 
 #endif
-

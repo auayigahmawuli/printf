@@ -176,4 +176,3 @@ unsigned int convert_u(va_list args, buffer_t *output,
 
 	return (ret);
 }
-

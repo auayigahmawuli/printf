@@ -1,4 +1,4 @@
-.TH man 3 "17 October 2022" "0.10" "_printf man page"[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[3[3~26 [3~[3~[3~[3~April[3~[3~[C[C[3~[3~[3~[3~[3~[C2023[3~[3~[3~[3~[3~[3~[3~[3~[3~[C[3~[3~[3~[3~[3~[3~[3~[3~[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[" "0.10" "_printf man page"
+.TH man 3 "17 October 2022" "0.10" "_printf man page"
 
 .SH NAME
 .B _printf\fR \- formatted output conversion
@@ -280,7 +280,4 @@ printf(3)
 The \fB_printf()\fR function emulates functionality of the C standard library 
 function \fBprintf()\fR. This man page borrows from the corresponding Linux 
 man page printf(3).
-
-.SH AUTHOR
-
-Prosper Mawuli Auayigah and Sheldon Debra Asiamah
+Prosper Mawuli & Debra Sheldon 

@@ -1,7 +1,4 @@
-
 #include "main.h"
-
-[A[A[A[B[C[C[C[C[C[C[C[C[C[[A#include "main.h"
 
 void cleanup(va_list args, buffer_t *output);
 int run_printf(const char *format, va_list args, buffer_t *output);
@@ -91,4 +88,3 @@ int _printf(const char *format, ...)
 
 	return (ret);
 }
-
